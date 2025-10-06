@@ -1,11 +1,11 @@
-# ZenGrid Sudoku — Mock Frontend
+# ZenGrid Sudoku
 
-ZenGrid is a multi-page mock website that showcases a polished Sudoku experience using only semantic HTML and modern CSS. The project fulfills the requirements of the "Sudoku: Part 1" assignment by delivering responsive layouts, consistent navigation, and thoughtfully designed puzzle views without any JavaScript.
+ZenGrid is a multi-page mock website that showcases a polished Sudoku experience using only semantic HTML and modern CSS.
 
 ## Project links
 
-- GitHub repository: ``
-- Live site (GitHub Pages): ``
+- GitHub repository: `https://github.khoury.northeastern.edu/juwentao/CS5610`
+- Live site (GitHub Pages): `https://pages.github.khoury.northeastern.edu/juwentao/CS5610/`
 - Walkthrough video (≤ 5 minutes): ``
 
 ## Pages
@@ -33,7 +33,7 @@ All routes use folder-based `index.html` files to ensure clean URLs and share gl
 ## Write-up
 
 ### 1. Challenges & timeline
-Building eight coordinated pages with purely static assets meant carefully planning shared navigation, typography, and utility classes before diving into each layout. The Sudoku grids required extra attention to keep borders crisp, accessible, and responsive without relying on JavaScript or additional markup helpers. The full assignment (ideation, design system, implementation, polish) was completed in roughly 10 hours spread across several focused work sessions.
+Building eight coordinated pages with purely static assets meant carefully planning shared navigation, typography, and utility classes before diving into each layout. The Sudoku grids required extra attention to keep borders crisp, accessible, and responsive without relying on JavaScript or additional markup helpers. The full assignment was completed in roughly 20 hours.
 
 ### 2. Mobile design decisions
 The navbar transitions to a fixed bottom bar on narrow viewports to maintain reachability while freeing vertical space for content. Puzzle boards switch to more compact cell sizing, and multi-column sections collapse into stacked cards to prevent horizontal scrolling. Form layouts use a fluid grid so that input labels remain adjacent to fields even on smaller screens, reducing cognitive load.
@@ -42,16 +42,16 @@ The navbar transitions to a fixed bottom bar on narrow viewports to maintain rea
 I aimed for a calm, modern aesthetic that pairs a deep navy foundation with warm accent highlights to mimic the contrast of pencil marks on paper. Cards, callouts, and buttons share rounded geometry and layered shadows to hint at physical tiles without overwhelming the interface. I'm particularly proud of the Sudoku grid styling that balances clarity, contrast, and responsive behavior with nothing but CSS.
 
 ### 4. Future enhancements
-Given more time I would add a light/dark theme toggle, interactive candidate notes, and celebratory animations on puzzle completion. A profile dashboard summarizing streaks, achievements, and personalized recommendations would also enrich the experience. Finally, integrating real puzzle data and validation logic (planned for future assignments) would transform the static mock into a fully playable app.
+Given more time I would add a light/dark theme toggle, interactive candidate notes, profile dashboard summarizing streaks, and celebratory animations on puzzle completion. Finally, integrating real puzzle data and validation logic would transform the static mock into a fully playable app.
 
 ### 5. Hours invested
-Approximately 10 hours were devoted to researching references, planning the component system, and implementing the layouts. Roughly 6 hours were spent on designing and coding the puzzle boards plus navigation, while the remaining 4 hours covered secondary pages, responsive refinements, and polish. Additional time would likely be needed for deployment and recording once the mock evolves into a functional build.
+Approximately 20 hours.
 
 ### 6. Assumptions
-I assumed the assignment allows external, hotlinked imagery and fonts provided no JavaScript libraries are introduced. I also assumed folder-based routing on GitHub Pages would be acceptable so every page can remain an `index.html` inside its own directory. Finally, I assumed placeholder email/social links are acceptable because the brief explicitly permits using fictional data.
+I assumed the assignment allows external, hotlinked imagery and fonts provided no JavaScript libraries are introduced. I also assumed folder-based routing on GitHub Pages would be acceptable so every page can remain an `index.html` inside its own directory.
 
 ### 7. Sources & attributions
-Hero photograph sourced from [Unsplash](https://unsplash.com/) with attribution embedded via the hotlinked URL metadata. Icon asset sourced from [SVG Repo](https://www.svgrepo.com/) under their free usage license. No other third-party code snippets were used; all HTML and CSS were created specifically for this assignment.
+Hero photograph sourced from [Unsplash](https://unsplash.com/) with attribution embedded via the hotlinked URL metadata. Icon asset sourced from [SVG Repo](https://www.svgrepo.com/) under their free usage license.
 
 ## Running locally
-No build tools are required. Open `index.html` in a web browser or host the folder with any static server (e.g., VS Code Live Server) to explore the mock site.
+No build tools are required. Open `index.html` in a web browser to explore the mock site.
