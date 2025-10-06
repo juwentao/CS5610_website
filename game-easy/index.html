@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenGrid | Easy Puzzle Mock</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <nav class="site-nav" aria-label="Primary">
+        <div class="site-nav__inner">
+            <a class="nav-brand" href="../">
+                <span>Σ</span>
+                ZenGrid
+            </a>
+            <div class="nav-links">
+                <a href="../">Home</a>
+                <a href="../selection/">Game Library</a>
+                <a href="../game-hard/">Hard Game</a>
+                <a class="active" href="./">Easy Game</a>
+                <a href="../rules/">Rules</a>
+                <a href="../high-scores/">High Scores</a>
+                <a href="../login/">Login</a>
+                <a href="../register/">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="page-header flow">
+            <div class="tag">Relaxed Flow • 6×6</div>
+            <h1 class="section-title">Whispering Canopy — Easy Mode</h1>
+            <p>Gentle breezes and generous starters make this a perfect warm-up grid. We’ve highlighted the first moves so you can focus on patterns.</p>
+        </header>
+
+        <section class="board-layout">
+            <article class="board-card">
+                <div class="board-header">
+                    <div class="timer">
+                        <span class="timer__label">Elapsed time</span>
+                        <span class="timer__value">00:08:54</span>
+                    </div>
+                    <div class="progress">
+                        <span>Cells filled: <strong>24 / 36</strong></span>
+                    </div>
+                </div>
+                <form class="board" aria-label="Easy Sudoku puzzle">
+                    <!-- Row 1 -->
+                    <input type="number" min="1" max="6" value="2" readonly>
+                    <input type="number" min="1" max="6" aria-label="Row 1 Column 2">
+                    <input type="number" min="1" max="6" value="" aria-label="Row 1 Column 3">
+                    <input type="number" min="1" max="6" value="5" readonly>
+                    <input type="number" min="1" max="6" aria-label="Row 1 Column 5">
+                    <input type="number" min="1" max="6" value="" aria-label="Row 1 Column 6">
+                    <!-- Row 2 -->
+                    <input type="number" min="1" max="6" value="" aria-label="Row 2 Column 1">
+                    <input type="number" min="1" max="6" value="4" readonly>
+                    <input type="number" min="1" max="6" aria-label="Row 2 Column 3">
+                    <input type="number" min="1" max="6" value="" aria-label="Row 2 Column 4">
+                    <input type="number" min="1" max="6" value="6" readonly>
+                    <input type="number" min="1" max="6" aria-label="Row 2 Column 6">
+                    <!-- Row 3 -->
+                    <input type="number" min="1" max="6" value="" aria-label="Row 3 Column 1">
+                    <input type="number" min="1" max="6" value="" aria-label="Row 3 Column 2">
+                    <input type="number" min="1" max="6" value="1" readonly>
+                    <input type="number" min="1" max="6" aria-label="Row 3 Column 4">
+                    <input type="number" min="1" max="6" value="" aria-label="Row 3 Column 5">
+                    <input type="number" min="1" max="6" value="3" readonly>
+                    <!-- Row 4 -->
+                    <input type="number" min="1" max="6" value="" aria-label="Row 4 Column 1">
+                    <input type="number" min="1" max="6" value="" aria-label="Row 4 Column 2">
+                    <input type="number" min="1" max="6" value="" aria-label="Row 4 Column 3">
+                    <input type="number" min="1" max="6" value="3" readonly>
+                    <input type="number" min="1" max="6" aria-label="Row 4 Column 5">
+                    <input type="number" min="1" max="6" value="1" readonly>
+                    <!-- Row 5 -->
+                    <input type="number" min="1" max="6" value="5" readonly>
+                    <input type="number" min="1" max="6" aria-label="Row 5 Column 2">
+                    <input type="number" min="1" max="6" value="" aria-label="Row 5 Column 3">
+                    <input type="number" min="1" max="6" value="" aria-label="Row 5 Column 4">
+                    <input type="number" min="1" max="6" value="2" readonly>
+                    <input type="number" min="1" max="6" aria-label="Row 5 Column 6">
+                    <!-- Row 6 -->
+                    <input type="number" min="1" max="6" aria-label="Row 6 Column 1">
+                    <input type="number" min="1" max="6" value="6" readonly>
+                    <input type="number" min="1" max="6" aria-label="Row 6 Column 3">
+                    <input type="number" min="1" max="6" value="1" readonly>
+                    <input type="number" min="1" max="6" aria-label="Row 6 Column 5">
+                    <input type="number" min="1" max="6" value="4" readonly>
+                </form>
+                <div class="board-actions">
+                    <button class="button" type="button" disabled>Save for later</button>
+                    <button class="button button--alt" type="button" disabled>Auto-fill notes</button>
+                </div>
+            </article>
+
+            <aside class="notes">
+                <h2>Relaxed guidance</h2>
+                <ol>
+                    <li>Column 2 already holds digits {1, 4, 6}; look for missing 2s and 3s.</li>
+                    <li>Top-right 3×2 block needs 1, 2, 4 — the 1 and 4 are locked, leaving 2 for row 1 column 6.</li>
+                    <li>Use the waterfall technique: scan rows, then columns, then sub-grids.</li>
+                </ol>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>Mock data for presentation purposes only.</p>
+        </div>
+    </footer>
+</body>
+</html>

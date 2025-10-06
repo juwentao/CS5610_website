@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenGrid | Login</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <nav class="site-nav" aria-label="Primary">
+        <div class="site-nav__inner">
+            <a class="nav-brand" href="../">
+                <span>Σ</span>
+                ZenGrid
+            </a>
+            <div class="nav-links">
+                <a href="../">Home</a>
+                <a href="../selection/">Game Library</a>
+                <a href="../game-hard/">Hard Game</a>
+                <a href="../game-easy/">Easy Game</a>
+                <a href="../rules/">Rules</a>
+                <a href="../high-scores/">High Scores</a>
+                <a class="active" href="./">Login</a>
+                <a href="../register/">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="page-header flow">
+            <div class="tag">Welcome back</div>
+            <h1 class="section-title">Sign in to continue</h1>
+            <p>Access your puzzle drafts, streak progress, and personalized themes. This mock form showcases our upcoming authentication flow.</p>
+        </header>
+
+        <section class="auth-grid">
+            <form class="form-grid" aria-label="Login form">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" placeholder="Enter username" required>
+
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" placeholder="Enter password" required>
+
+                <button class="button" type="submit" disabled>Sign in (mock)</button>
+            </form>
+
+            <div class="auth-note flow">
+                <h2>Need an account?</h2>
+                <p>Registration is quick. Create a profile to start saving your puzzle history and unlock streak reminders.</p>
+                <a class="button button--alt" href="../register/">Go to register</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>Account support: <a href="mailto:support@zengrid.com">support@zengrid.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>

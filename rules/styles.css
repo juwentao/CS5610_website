@@ -1,0 +1,64 @@
+.page-header {
+    margin-bottom: 2.5rem;
+}
+
+.rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.rule-card {
+    background: var(--light-color);
+    padding: 1.75rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 18px 44px rgba(27, 29, 42, 0.08);
+    border: 1px solid rgba(45, 96, 163, 0.12);
+}
+
+.rule-card h2 {
+    color: var(--primary-color);
+}
+
+.tips {
+    margin-bottom: 3rem;
+}
+
+.tips-list {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+}
+
+.tips-list li {
+    background: var(--light-color);
+    padding: 1.25rem;
+    border-radius: 1rem;
+    display: grid;
+    gap: 0.5rem;
+    border-left: 4px solid var(--accent-color);
+}
+
+.tips-list span {
+    font-weight: 600;
+}
+
+.credits-card {
+    background: var(--light-color);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 16px 40px rgba(27, 29, 42, 0.08);
+}
+
+.credits-card ul {
+    list-style: disc inside;
+    display: grid;
+    gap: 0.5rem;
+}
+
+@media (max-width: 600px) {
+    .tips-list li {
+        padding: 1rem;
+    }
+}

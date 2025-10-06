@@ -1,0 +1,20 @@
+.leaderboard {
+    margin-bottom: 2.5rem;
+}
+
+.table {
+    caption-side: bottom;
+}
+
+.table caption {
+    padding: 0.75rem 1rem;
+    color: var(--muted-color);
+    font-size: 0.9rem;
+}
+
+.callout {
+    background: var(--light-color);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 18px 44px rgba(27, 29, 42, 0.08);
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenGrid | High Scores</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <nav class="site-nav" aria-label="Primary">
+        <div class="site-nav__inner">
+            <a class="nav-brand" href="../">
+                <span>Σ</span>
+                ZenGrid
+            </a>
+            <div class="nav-links">
+                <a href="../">Home</a>
+                <a href="../selection/">Game Library</a>
+                <a href="../game-hard/">Hard Game</a>
+                <a href="../game-easy/">Easy Game</a>
+                <a href="../rules/">Rules</a>
+                <a class="active" href="./">High Scores</a>
+                <a href="../login/">Login</a>
+                <a href="../register/">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="page-header flow">
+            <div class="tag">Hall of fame</div>
+            <h1 class="section-title">Top mock solvers</h1>
+            <p>These dedicated puzzlers have completed the most handcrafted challenges across easy and hard modes. Cheer them on and aim even higher!</p>
+        </header>
+
+        <section class="leaderboard">
+            <table class="table" aria-describedby="leaderboard-caption">
+                <caption id="leaderboard-caption">Mock leaderboard reset weekly every Monday at 06:00 UTC.</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Rank</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Completed</th>
+                        <th scope="col">Streak</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>GridGlyph</td>
+                        <td>148</td>
+                        <td>24 days</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>LogicLyra</td>
+                        <td>136</td>
+                        <td>19 days</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>NixNumbers</td>
+                        <td>121</td>
+                        <td>12 days</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>ZenScribe</td>
+                        <td>98</td>
+                        <td>8 days</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>PuzzlePiper</td>
+                        <td>74</td>
+                        <td>5 days</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="callout flow">
+            <h2>Submit your score</h2>
+            <p>Ready to see your name glow in the leaderboard? Log in, complete a puzzle, and we’ll auto-update your mock stats during our next sprint.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>Leaderboard managed by the ZenGrid community team.</p>
+        </div>
+    </footer>
+</body>
+</html>

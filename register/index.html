@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenGrid | Register</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <nav class="site-nav" aria-label="Primary">
+        <div class="site-nav__inner">
+            <a class="nav-brand" href="../">
+                <span>Σ</span>
+                ZenGrid
+            </a>
+            <div class="nav-links">
+                <a href="../">Home</a>
+                <a href="../selection/">Game Library</a>
+                <a href="../game-hard/">Hard Game</a>
+                <a href="../game-easy/">Easy Game</a>
+                <a href="../rules/">Rules</a>
+                <a href="../high-scores/">High Scores</a>
+                <a href="../login/">Login</a>
+                <a class="active" href="./">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="page-header flow">
+            <div class="tag">Create your profile</div>
+            <h1 class="section-title">Join the ZenGrid community</h1>
+            <p>Save your favorite themes, track streaks, and sync your progress across devices. Complete the form to reserve your mock account.</p>
+        </header>
+
+        <section class="auth-grid">
+            <form class="form-grid" aria-label="Register form">
+                <label for="reg-username">Username</label>
+                <input id="reg-username" name="username" type="text" placeholder="Choose a username" required>
+
+                <label for="reg-email">Email</label>
+                <input id="reg-email" name="email" type="email" placeholder="you@example.com" required>
+
+                <label for="reg-password">Password</label>
+                <input id="reg-password" name="password" type="password" placeholder="Create a password" required>
+
+                <label for="reg-confirm">Verify password</label>
+                <input id="reg-confirm" name="confirm" type="password" placeholder="Re-enter password" required>
+
+                <button class="button" type="submit" disabled>Create account (mock)</button>
+            </form>
+
+            <aside class="benefits flow">
+                <h2>Why join?</h2>
+                <ul>
+                    <li>Daily mindful puzzle prompts delivered to your inbox.</li>
+                    <li>Alternate color palettes for low-light solving.</li>
+                    <li>Early access to tournament-grade grids.</li>
+                </ul>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>Already registered? <a href="../login/">Sign in here</a>.</p>
+        </div>
+    </footer>
+</body>
+</html>
