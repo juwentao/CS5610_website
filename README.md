@@ -6,7 +6,7 @@ ZenGrid is a multi-page mock website that showcases a polished Sudoku experience
 
 - GitHub repository: `https://github.khoury.northeastern.edu/juwentao/CS5610`
 - Live site (GitHub Pages): `https://pages.github.khoury.northeastern.edu/juwentao/CS5610/`
-- Walkthrough video (≤ 5 minutes): ``
+- Walkthrough video (≤ 5 minutes): `https://northeastern.zoom.us/rec/share/bnAsJT3zE5WtO3t5c0iYCtd0YmkYop-zB_kx6lCzVMEYk0TH7eeIxKYLYu60Ymg.YbVZGFoSNFdMvD0K?startTime=1759787509000` password: j+vEh2*M
 
 ## Pages
 
