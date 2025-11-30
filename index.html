@@ -5,80 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZenGrid Sudoku</title>
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/home.css">
     <link rel="icon" type="image/svg+xml" href="https://www.svgrepo.com/show/522613/grid.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="site-nav" aria-label="Primary">
-        <div class="site-nav__inner">
-            <a class="nav-brand" href="./">
-                <span>Σ</span>
-                ZenGrid
-            </a>
-            <div class="nav-links">
-                <a class="active" href="./">Home</a>
-                <a href="./selection/">Game Library</a>
-                <a href="./game-hard/">Hard Game</a>
-                <a href="./game-easy/">Easy Game</a>
-                <a href="./rules/">Rules</a>
-                <a href="./high-scores/">High Scores</a>
-                <a href="./login/">Login</a>
-                <a href="./register/">Register</a>
-            </div>
-        </div>
-    </nav>
-
-    <main>
-        <header class="hero">
-            <div class="hero__copy flow">
-                <div class="tag">Discover Your Puzzle Flow</div>
-                <h1>Sharpen your mind with beautifully crafted Sudoku.</h1>
-                <p>Dive into handcrafted puzzles, guided strategies, and progress tracking designed for both curious beginners and seasoned solvers.</p>
-                <div class="hero__cta">
-                    <a class="button" href="./selection/">Browse mock puzzles</a>
-                    <a class="button" style="background: var(--accent-color); color: var(--dark-color);" href="./rules/">Learn the basics</a>
-                </div>
-            </div>
-            <div class="hero__visual" aria-hidden="true">
-                <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=680&q=80" alt="Sudoku puzzle in progress on a table">
-            </div>
-        </header>
-
-        <section class="feature-section">
-            <h2 class="section-title">Why ZenGrid?</h2>
-            <div class="feature-grid">
-                <article class="feature-card flow">
-                    <h3>Mindful experience</h3>
-                    <p>Enjoy a calm, distraction-free layout that keeps every number within reach. Subtle animations guide your attention without overwhelming.</p>
-                </article>
-                <article class="feature-card flow">
-                    <h3>Progressive challenges</h3>
-                    <p>Select from handcrafted puzzle sets curated for each difficulty. Track your mock progress and explore strategies as you climb.</p>
-                </article>
-                <article class="feature-card flow">
-                    <h3>Mobile friendly</h3>
-                    <p>Solve on any device. The adaptive layout keeps the grid crisp, inputs large enough to tap, and navigation exactly where you need it.</p>
-                </article>
-            </div>
-        </section>
-
-        <section aria-labelledby="toolkit-heading" class="grid-gallery">
-            <h2 id="toolkit-heading" class="sr-only">Sudoku toolkit</h2>
-            <span>Strategy notes</span>
-            <span>Timer mockups</span>
-            <span>Theme switch</span>
-            <span>Player stats</span>
-            <span>Daily streaks</span>
-            <span>Community tips</span>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-inner">
-            <p>ZenGrid Sudoku &copy; 2025. Crafted as a design prototype.</p>
-            <p>Have feedback? <a href="mailto:ju.wen@northeastern.edu">ju.wen@northeastern.edu</a></p>
-        </div>
-    </footer>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
