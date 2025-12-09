@@ -1,57 +1,141 @@
 # ZenGrid Sudoku
 
-ZenGrid is a multi-page mock website that showcases a polished Sudoku experience using only semantic HTML and modern CSS.
+A full-stack Sudoku web application with user authentication, game management, and high score tracking.
+
+## Features
+
+- **User Authentication**: Register, login, and logout with secure password hashing
+- **Game Management**: Create, play, and track Sudoku games (Easy 6x6 and Normal 9x9)
+- **High Scores**: Track completion times and compete on the leaderboard
+- **Unique Game Names**: Each game gets a unique 3-word name from 1000+ word combinations
+- **RESTful API**: Full CRUD operations for games with proper HTTP verbs
+
+## Tech Stack
+
+### Frontend
+- React 18
+- React Router DOM
+- Vite
+
+### Backend
+- Node.js / Express
+- MongoDB / Mongoose
+- JWT Authentication
+- bcryptjs for password hashing
+
+## Getting Started
+
+### Prerequisites
+- Node.js 18+
+- MongoDB (local or MongoDB Atlas)
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/juwentao/CS5610_website.git
+cd CS5610_website
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Configure environment variables
+Create a `.env` file in the `server` directory (or copy from `.env.example`):
+```env
+MONGODB_URI=mongodb://localhost:27017/sudoku_game
+JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
+PORT=5000
+CLIENT_URL=http://localhost:5173
+```
+
+4. Start MongoDB (if running locally)
+```bash
+mongod
+```
+
+5. Run the application
+
+**Development mode (run both frontend and backend):**
+```bash
+npm run dev:all
+```
+
+**Or run separately:**
+```bash
+# Terminal 1 - Backend
+npm run dev:server
+
+# Terminal 2 - Frontend
+npm run dev
+```
+
+6. Open your browser and navigate to `http://localhost:5173`
+
+## API Endpoints
+
+### Authentication
+- `POST /api/auth/register` - Register new user
+- `POST /api/auth/login` - Login user
+- `GET /api/auth/me` - Get current user
+- `POST /api/auth/logout` - Logout user
+
+### Sudoku Games
+- `GET /api/sudoku` - Get all games
+- `POST /api/sudoku` - Create new game (body: `{ difficulty: "EASY" | "NORMAL" }`)
+- `GET /api/sudoku/:id` - Get game by ID
+- `PUT /api/sudoku/:id` - Update game
+- `DELETE /api/sudoku/:id` - Delete game
+
+### High Scores
+- `GET /api/highscore` - Get all high scores (query: `?difficulty=EASY|NORMAL&limit=50`)
+- `POST /api/highscore` - Create high score (body: `{ gameId, time }`)
+- `GET /api/highscore/:gameId` - Get high scores for specific game
+
+## Project Structure
+
+```
+CS5610_website/
+├── server/                 # Backend server
+│   ├── config/            # Database and word list config
+│   ├── middleware/        # Auth middleware
+│   ├── models/            # Mongoose models (User, Game, HighScore)
+│   ├── routes/            # API routes
+│   ├── utils/             # Sudoku generator
+│   └── index.js           # Express server entry point
+├── src/                   # Frontend React app
+│   ├── components/        # Reusable components
+│   ├── context/           # React contexts (Auth, Game)
+│   ├── pages/             # Page components
+│   ├── services/          # API service functions
+│   └── styles/            # CSS styles
+├── package.json
+└── vite.config.js
+```
+
+## Database Collections
+
+### Users
+- username, email, password (hashed), createdAt
+
+### Games
+- name (unique 3-word), difficulty, board, initialBoard, solution
+- createdBy, creatorUsername, isCompleted, completionTime, createdAt
+
+### HighScores
+- gameId, gameName, userId, username, time, difficulty, completedAt
+
+## Game Rules
+
+Sudoku is a logic puzzle where:
+- Every row must contain numbers 1-X exactly once
+- Every column must contain numbers 1-X exactly once
+- Every sub-grid must contain numbers 1-X exactly once
+
+Where X = 6 for Easy mode and X = 9 for Normal mode.
 
 ## Project links
 
-- GitHub repository: `https://github.khoury.northeastern.edu/juwentao/CS5610`
-- Live site (GitHub Pages): `https://pages.github.khoury.northeastern.edu/juwentao/CS5610/`
-- Walkthrough video (≤ 5 minutes): `https://northeastern.zoom.us/rec/share/bnAsJT3zE5WtO3t5c0iYCtd0YmkYop-zB_kx6lCzVMEYk0TH7eeIxKYLYu60Ymg.YbVZGFoSNFdMvD0K?startTime=1759787509000` password: j+vEh2*M
-
-## Pages
-
-| Path | Description |
-| --- | --- |
-| `/` | Home landing page introducing ZenGrid's brand and value. |
-| `/selection/` | Mock game library with curated puzzle summaries. |
-| `/game-hard/` | 9×9 hard puzzle layout with subgrid styling and status panel. |
-| `/game-easy/` | 6×6 easy puzzle layout with guidance sidebar. |
-| `/rules/` | Rules overview, tips, and credits section. |
-| `/high-scores/` | Leaderboard table highlighting top solvers. |
-| `/login/` | Username/password form (mock only). |
-| `/register/` | Registration form with verification fields (mock only). |
-
-All routes use folder-based `index.html` files to ensure clean URLs and share global styling from `assets/css/base.css`.
-
-## Responsive + design notes
-
-- **Navigation**: Sticky desktop navbar that repositions to the bottom on screens narrower than 700px, preserving access without covering content.
-- **Layouts**: CSS Grid and Flexbox power hero sections, puzzle boards, leaderboards, and form layouts. Media queries adjust column counts and padding for small screens.
-- **Visual language**: Custom color palette, Google Fonts import, subtle transitions, and purposeful pseudo-elements (`::before`, `::after`) create a cohesive look while highlighting interactions.
-- **Accessibility**: Semantic headings, descriptive labels, `aria-label` usage on grid inputs, and `sr-only` helpers improve screen reader support for the mock experience.
-
-## Write-up
-
-### 1. Challenges & timeline
-Building eight coordinated pages with purely static assets meant carefully planning shared navigation, typography, and utility classes before diving into each layout. The Sudoku grids required extra attention to keep borders crisp, accessible, and responsive without relying on JavaScript or additional markup helpers. The full assignment was completed in roughly 20 hours.
-
-### 2. Mobile design decisions
-The navbar transitions to a fixed bottom bar on narrow viewports to maintain reachability while freeing vertical space for content. Puzzle boards switch to more compact cell sizing, and multi-column sections collapse into stacked cards to prevent horizontal scrolling. Form layouts use a fluid grid so that input labels remain adjacent to fields even on smaller screens, reducing cognitive load.
-
-### 3. Visual design considerations
-I aimed for a calm, modern aesthetic that pairs a deep navy foundation with warm accent highlights to mimic the contrast of pencil marks on paper. Cards, callouts, and buttons share rounded geometry and layered shadows to hint at physical tiles without overwhelming the interface. I'm particularly proud of the Sudoku grid styling that balances clarity, contrast, and responsive behavior with nothing but CSS.
-
-### 4. Future enhancements
-Given more time I would add a light/dark theme toggle, interactive candidate notes, profile dashboard summarizing streaks, and celebratory animations on puzzle completion. Finally, integrating real puzzle data and validation logic would transform the static mock into a fully playable app.
-
-### 5. Hours invested
-Approximately 20 hours.
-
-### 6. Assumptions
-I assumed the assignment allows external, hotlinked imagery and fonts provided no JavaScript libraries are introduced. I also assumed folder-based routing on GitHub Pages would be acceptable so every page can remain an `index.html` inside its own directory.
-
-### 7. Sources & attributions
-Hero photograph sourced from [Unsplash](https://unsplash.com/) with attribution embedded via the hotlinked URL metadata. Icon asset sourced from [SVG Repo](https://www.svgrepo.com/) under their free usage license.
-
-## Running locally
-No build tools are required. Open `index.html` in a web browser to explore the mock site.
+- Live site (Render): `https://cs5610-website.onrender.com`
