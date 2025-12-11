@@ -39,8 +39,17 @@ const distPath = path.join(__dirname, '../dist');
 app.use(express.static(distPath));
 
 // Handle React routing - send all non-API requests to index.html
-app.get('*', (req, res) => {
+app.get('*', (req, res, next) => {
+  // Don't serve index.html for API routes
+  if (req.path.startsWith('/api')) {
+    return next();
+  }
   res.sendFile(path.join(distPath, 'index.html'));
+});
+
+// 404 handler for API routes
+app.use('/api', (req, res) => {
+  res.status(404).json({ message: 'API route not found' });
 });
 
 // Error handling middleware
