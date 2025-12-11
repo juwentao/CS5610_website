@@ -41,7 +41,7 @@ function Rules() {
       <section className="credits" aria-labelledby="credits-heading">
         <h2 id="credits-heading" className="section-title">Made by</h2>
         <div className="credits-card flow">
-          <p>This project was developed by <strong>Wentao Ju</strong> as part of a React-based frontend assignment.</p>
+          <p>This project was developed by <strong>Wentao Ju</strong>.</p>
           <p>Connect and follow the journey:</p>
           <ul>
             <li><a href="mailto:ju.wen@northeastern.edu">ju.wen@northeastern.edu</a></li>

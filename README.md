@@ -74,6 +74,26 @@ npm run dev
 
 6. Open your browser and navigate to `http://localhost:5173`
 
+**Production mode:**
+```bash
+npm run build
+npm start
+```
+Then open `http://localhost:5000`
+
+## Deployment (Render)
+
+1. Create a **Web Service** on [Render](https://render.com)
+2. Connect your GitHub repository
+3. Configure:
+   - **Build Command**: `npm install && npm run build`
+   - **Start Command**: `node server/index.js`
+4. Add environment variables:
+   - `NODE_ENV`: `production`
+   - `MONGODB_URI`: Your MongoDB Atlas connection string
+   - `JWT_SECRET`: A secure secret key
+5. Deploy!
+
 ## API Endpoints
 
 ### Authentication
@@ -136,6 +156,11 @@ Sudoku is a logic puzzle where:
 
 Where X = 6 for Easy mode and X = 9 for Normal mode.
 
-## Project links
+## Project Links
 
-- Live site (Render): `https://cs5610-website.onrender.com`
+- **Live Site**: https://zengrid-sudoku.onrender.com
+- **GitHub**: https://github.com/juwentao/CS5610_website
+
+## License
+
+MIT
