@@ -24,6 +24,8 @@ function GamePage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [scoreSaved, setScoreSaved] = useState(false);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [deleting, setDeleting] = useState(false);
   
   const timerRef = useRef(null);
 
@@ -269,6 +271,22 @@ function GamePage() {
     }
   };
 
+  // Delete game
+  const handleDeleteGame = async () => {
+    try {
+      setDeleting(true);
+      await gameApi.delete(gameId);
+      navigate('/games');
+    } catch (err) {
+      setError(err.message);
+      setDeleting(false);
+      setShowDeleteConfirm(false);
+    }
+  };
+
+  // Check if current user is the creator
+  const isCreator = user && game && game.createdBy === user._id;
+
   // Create game context value for Board and GameControls
   const gameContextValue = {
     board,
@@ -343,6 +361,35 @@ function GamePage() {
 
       {isGameWon && <WinMessage timer={timer} />}
 
+      {/* Delete Confirmation Modal */}
+      {showDeleteConfirm && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <h3>Delete Game</h3>
+            <p>Are you sure you want to delete this game?</p>
+            <p className="modal-warning">
+              <strong>Warning:</strong> This will also remove all high scores associated with this game.
+            </p>
+            <div className="modal-buttons">
+              <button 
+                className="button button--danger" 
+                onClick={handleDeleteGame}
+                disabled={deleting}
+              >
+                {deleting ? 'Deleting...' : 'Delete'}
+              </button>
+              <button 
+                className="button button--alt" 
+                onClick={() => setShowDeleteConfirm(false)}
+                disabled={deleting}
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <section className="board-layout">
         <article className="board-card">
           <div className="board-header">
@@ -378,6 +425,14 @@ function GamePage() {
             >
               Reset Game
             </button>
+            {isCreator && (
+              <button 
+                className="button button--danger" 
+                onClick={() => setShowDeleteConfirm(true)}
+              >
+                DELETE
+              </button>
+            )}
           </div>
         </article>
 

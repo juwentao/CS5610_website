@@ -63,7 +63,7 @@ export function generateSolution(size) {
 }
 
 // Count the number of solutions for a puzzle using backtracking
-function countSolutions(puzzle, size) {
+export function countSolutions(puzzle, size) {
   const board = puzzle.map(row => [...row]);
   const subgridRows = size === 6 ? 2 : 3;
   const subgridCols = size === 6 ? 3 : 3;
@@ -163,4 +163,4 @@ export function generateGame(difficulty) {
   };
 }
 
-export default { generateSolution, createPuzzle, generateGame };
+export default { generateSolution, createPuzzle, generateGame, countSolutions };

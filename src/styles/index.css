@@ -176,6 +176,25 @@ main {
   box-shadow: 0 12px 24px rgba(255, 184, 77, 0.3);
 }
 
+.button--danger {
+  background: var(--error-color);
+  color: var(--light-color);
+}
+
+.button--danger:hover {
+  background: #c53030;
+  box-shadow: 0 12px 24px rgba(229, 62, 62, 0.3);
+}
+
+.button--custom {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: var(--light-color);
+}
+
+.button--custom:hover {
+  box-shadow: 0 12px 24px rgba(102, 126, 234, 0.4);
+}
+
 .button--hint {
   background: var(--success-color);
   color: var(--light-color);
@@ -1324,6 +1343,60 @@ blockquote {
   justify-content: center;
   margin-top: 1.5rem;
   flex-wrap: wrap;
+}
+
+/* ===== Modal ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+
+.modal {
+  background: var(--light-color);
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--dark-color);
+}
+
+.modal p {
+  color: var(--muted-color);
+  margin-bottom: 0.5rem;
+}
+
+.modal-warning {
+  color: var(--error-color) !important;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem !important;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.modal-buttons .button {
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 /* ===== Responsive Adjustments for New Components ===== */

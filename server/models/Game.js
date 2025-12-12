@@ -51,6 +51,10 @@ const gameSchema = new mongoose.Schema({
     type: Number, // Time in seconds
     default: null
   },
+  isCustom: {
+    type: Boolean,
+    default: false
+  },
   createdAt: {
     type: Date,
     default: Date.now

@@ -68,6 +68,13 @@ function Selection() {
           >
             {creating ? 'Creating...' : 'Create Easy Game (6×6)'}
           </button>
+          <button 
+            className="button button--custom" 
+            onClick={() => navigate('/custom')}
+            disabled={creating}
+          >
+            Create Custom Game
+          </button>
         </div>
       </section>
 

@@ -112,6 +112,22 @@ export const gameApi = {
     }
     return response.json();
   },
+
+  createCustom: async (board) => {
+    const response = await fetch(`${API_BASE_URL}/sudoku/custom`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        ...getAuthHeaders(),
+      },
+      body: JSON.stringify({ board }),
+    });
+    const data = await response.json();
+    if (!response.ok) {
+      throw new Error(data.message || 'Failed to create custom game');
+    }
+    return data;
+  },
 };
 
 // High Score API

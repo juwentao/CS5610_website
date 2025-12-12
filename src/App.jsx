@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Selection from './pages/Selection'
 import GamePage from './pages/GamePage'
+import CustomGame from './pages/CustomGame'
 import Rules from './pages/Rules'
 import HighScores from './pages/HighScores'
 import Login from './pages/Login'
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/games" element={<Selection />} />
           <Route path="/game/:gameId" element={<GamePage />} />
+          <Route path="/custom" element={<CustomGame />} />
           <Route path="/rules" element={<Rules />} />
           <Route path="/scores" element={<HighScores />} />
           <Route path="/login" element={<Login />} />
